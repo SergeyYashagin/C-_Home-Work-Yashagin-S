@@ -84,7 +84,7 @@ else
 5 -> 2, 4
 8 -> 2, 4, 6, 8 */
 
-Console.WriteLine("Введите число N");
+/* Console.WriteLine("Введите число N");
 int N = int.Parse(Console.ReadLine());
 int A=2;
 
@@ -92,4 +92,4 @@ int A=2;
     {
     Console.WriteLine(A);
     A+=2;
-    }
+    } */
