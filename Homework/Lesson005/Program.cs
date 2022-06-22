@@ -87,11 +87,8 @@ for (int i = 0; i < mass.Length; i++)
 }
 Print(mass);
 
-
-for (int i = 0; i < mass.Length; i++)
-{
-    double min = mass[i];
-    double max = mass[i];
+    double min = mass[0];
+    double max = mass[0];
     for (int j = 0; j < mass.Length; j++)
     {
         if (mass[j] < min)
@@ -114,8 +111,8 @@ for (int i = 0; i < mass.Length; i++)
     {
         Console.WriteLine("Разница чисел: " + Math.Round((max - min), 2));
     }
-    break;
-}
+    
+
 
 
 
