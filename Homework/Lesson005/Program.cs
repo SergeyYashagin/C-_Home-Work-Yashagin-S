@@ -83,38 +83,38 @@ void Print(double[] arr)
 double[] mass = new double[5];
 for (int i = 0; i < mass.Length; i++)
 {
-    mass[i] = new Random().Next(0, 100) + Math.Round(new Random().NextDouble(),2);
+    mass[i] = new Random().Next(-100, 100) + Math.Round(new Random().NextDouble(), 2);
 }
 Print(mass);
 
 
 for (int i = 0; i < mass.Length; i++)
 {
-    double min=i;
-    double max=i;
+    double min = mass[i];
+    double max = mass[i];
     for (int j = 0; j < mass.Length; j++)
-{
-    if(mass[j]< min)
     {
-         min=mass[j];
+        if (mass[j] < min)
+        {
+            min = mass[j];
+        }
+        else if (mass[j] > max)
+        {
+            max = mass[j];
+        }
     }
-    else if (mass[j]>max)
-    {
-        max=mass[j];
-    }
-}
-Console.WriteLine("Минимальное число: " +min);
-Console.WriteLine("Максимальное число: " +max);
+    Console.WriteLine("Минимальное число: " + min);
+    Console.WriteLine("Максимальное число: " + max);
 
-if(min<0)
-{
-Console.WriteLine("Разница чисел: " +(max-(-min)));
-}
-else
-{
-Console.WriteLine("Разница чисел: " +(max-min));
-}
-break;
+    if (min < 0)
+    {
+        Console.WriteLine("Разница чисел: " + (max - (-min)));
+    }
+    else
+    {
+        Console.WriteLine("Разница чисел: " + Math.Round((max - min), 2));
+    }
+    break;
 }
 
 
